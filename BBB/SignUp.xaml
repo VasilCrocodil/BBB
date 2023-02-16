@@ -1,0 +1,36 @@
+﻿<Window x:Class="BBB.SignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BBB"
+        mc:Ignorable="d"
+        Title="Loading_Page" Height="500" Width="450" Background="LightGray">
+    <Border
+        Background="White"
+        Margin="20">
+
+        <StackPanel>
+            <Label Content="sign up" Foreground="Blue" HorizontalAlignment="Center"/>
+            <Separator></Separator>
+            <Label Content="First Name" Foreground="Black"></Label>
+            <TextBox x:Name="txtFirstName" Background="White" Foreground="Black" FontSize="18"></TextBox>
+            <Label Content="Last Name" Foreground="Black"></Label>
+            <TextBox x:Name="txtLastName" Background="White" Foreground="Black" FontSize="18"></TextBox>
+
+            <Label Content="Email" Foreground="Black"></Label>
+            <TextBox x:Name="txtEmail" Background="White" Foreground="Black" FontSize="18"></TextBox>
+
+            <Label Content="Username" Foreground="Black"></Label>
+            <TextBox x:Name="txtUsername" Background="White" Foreground="Black" FontSize="18"></TextBox>
+
+            <Label Content="Password" Foreground="Black"></Label>
+            <PasswordBox x:Name="txtPassword" Background="White" Foreground="Black" FontSize="18"></PasswordBox>
+
+            <Label Content="Confirm Password" Foreground="Black"></Label>
+            <PasswordBox x:Name="txtConfirmPassword" Background="White" Foreground="Black" FontSize="18"></PasswordBox>
+            <Button Content="Submit" Margin="60,20" Background="Gold" Click="Button_Click"></Button>
+
+        </StackPanel>
+    </Border>
+</Window>
