@@ -14,18 +14,18 @@ using System.Windows.Shapes;
 using System.Data.SqlClient;
 using System.Data;
 
+
 namespace BBB
 {
     /// <summary>
-    /// Interaction logic for Loading_Page.xaml
+    /// Interaction logic for LogIn_Teacher.xaml
     /// </summary>
-    public partial class Loading_Page : Window
+    public partial class LogIn_Teacher : Window
     {
-        public Loading_Page()
+        public LogIn_Teacher()
         {
             InitializeComponent();
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             SqlConnection sqlCon = new SqlConnection(@"Data Source=LABSCIFIPC11\LOCALHOST; Initial Catalog =library_project; Integrated Security = True ");
@@ -36,12 +36,12 @@ namespace BBB
                 if (sqlCon.State == ConnectionState.Closed)
                     sqlCon.Open();
 
-                string query = "SELECT COUNT(1) FROM Students Where StudentID=@StudentID and password_=@Password";
+                string query = "SELECT COUNT(1) FROM Teachers Where TeacherID=@TeacherID and password_=@Password";
                 SqlCommand sqlCommand = new SqlCommand(query, sqlCon);
                 sqlCommand.CommandType = CommandType.Text;
-                sqlCommand.Parameters.AddWithValue("@StudentID", txtStudentID.Text);
+                sqlCommand.Parameters.AddWithValue("@TeacherID", txtTeacherID.Text);
                 sqlCommand.Parameters.AddWithValue("@Password", txtPassword.Password);
-                
+
                 int count = Convert.ToInt32(sqlCommand.ExecuteScalar());
                 if (count == 1)
                 {
@@ -66,5 +66,5 @@ namespace BBB
             }
 
         }
-    }   
+    }
 }
