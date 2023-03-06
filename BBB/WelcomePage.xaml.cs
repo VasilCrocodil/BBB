@@ -23,5 +23,33 @@ namespace BBB
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Loading_Page a = new Loading_Page();
+            a.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            LogIn_Teacher b = new LogIn_Teacher();
+            b.Show();
+            this.Close();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            LogIn_Lib c = new LogIn_Lib();
+            c.Show();
+            this.Close();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            SignUp d = new SignUp();
+            d.Show();
+            this.Close();
+        }
     }
 }

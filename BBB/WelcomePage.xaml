@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="WelcomePage" Height="450" Width="450">
     <Grid>
-        <Button HorizontalAlignment="Left" Margin="194,79,0,0" VerticalAlignment="Top" Width="75">
-            <Button Content="Button" Width="75"/>
-        </Button>
-        <Button Content="Button" Margin="194,142,174.333,257.667"/>
-        <Button Content="Button" Margin="194,196,174.333,203.667"/>
-        <Button Content="Button" Margin="194,250,174.333,149.667"/>
+
+        <Button Content="Login as Student" Margin="172,74,161.333,323.667" Click="Button_Click"/>
+
+        <Button Content="Login as Teacher" HorizontalAlignment="Center"  Margin="172,129,161.333,270.667" Click="Button_Click_1" Width="110"/>
+        <Button Content="Login as Librarian" HorizontalAlignment="Center" Margin="172,183,161.333,216.667" Click="Button_Click_2" RenderTransformOrigin="-0.329,0.195" Width="110"/>
+        <Button Content="Sign Up" HorizontalAlignment="Center" Margin="189,240,179.333,159.667" Click="Button_Click_3"/>
 
     </Grid>
 </Window>

@@ -45,15 +45,47 @@ namespace BBB
                 int count = Convert.ToInt32(sqlCommand.ExecuteScalar());
                 if (count == 1)
                 {
-                    MainWindow dashboard = new MainWindow();
-                    dashboard.label.Content = $"Welcome";
-                    dashboard.Show();
+                    
                     this.Close();
                 }
                 else
                 {
                     MessageBox.Show("Username or password are not correct!");
                 }
+
+                string query1 = "Select BookID, BookName, author, pubdate, publisher,genre from Books";
+                SqlCommand cmd = new SqlCommand(query1, sqlCon);
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                Librarian_Access a = new Librarian_Access();
+
+
+                a.DataGrid_.ItemsSource = dt.DefaultView;
+                adapter.Update(dt);
+
+
+                
+
+
+                string query2 = "Select BookID, donatorID, donatorName, donationdate from BooksDonated";
+                SqlCommand cmd1 = new SqlCommand(query2, sqlCon);
+                cmd1.ExecuteNonQuery();
+                SqlDataAdapter adapter1 = new SqlDataAdapter(cmd1);
+                DataTable dt1 = new DataTable();
+                adapter1.Fill(dt1);
+
+                
+                a.DataGrid_2.ItemsSource = dt1.DefaultView;
+                adapter1.Update(dt1);
+
+
+                sqlCon.Close();
+                a.Show();
+                this.Close();
+
+
             }
             catch (Exception ex)
             {
