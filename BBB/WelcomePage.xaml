@@ -8,11 +8,11 @@
         Title="WelcomePage" Height="450" Width="450">
     <Grid>
 
-        <Button Content="Login as Student" Margin="172,74,161.333,323.667" Click="Button_Click"/>
+        <Button Content="Login as Student" Margin="161,84,161.333,301.667" Click="Button_Click"/>
 
-        <Button Content="Login as Teacher" HorizontalAlignment="Center"  Margin="172,129,161.333,270.667" Click="Button_Click_1" Width="110"/>
-        <Button Content="Login as Librarian" HorizontalAlignment="Center" Margin="172,183,161.333,216.667" Click="Button_Click_2" RenderTransformOrigin="-0.329,0.195" Width="110"/>
-        <Button Content="Sign Up" HorizontalAlignment="Center" Margin="189,240,179.333,159.667" Click="Button_Click_3"/>
+        <Button Content="Login as Teacher" HorizontalAlignment="Center"  Margin="161,152,161.333,231.667" Click="Button_Click_1" Width="121"/>
+        <Button Content="Login as Librarian" HorizontalAlignment="Center" Margin="161,215,161.333,171.667" Click="Button_Click_2" RenderTransformOrigin="-0.329,0.195" Width="121"/>
+        <Button Content="Sign Up" HorizontalAlignment="Center" Margin="193,304,188.333,86.667" Click="Button_Click_3" Width="62"/>
 
     </Grid>
 </Window>

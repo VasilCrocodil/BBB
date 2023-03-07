@@ -47,7 +47,6 @@ namespace BBB
                 {
                     
 
-                    this.Close();
                 }
                 else
                 {

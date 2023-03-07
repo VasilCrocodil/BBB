@@ -13,16 +13,13 @@
         <StackPanel>
             <Label Content="sign up" Foreground="Blue" HorizontalAlignment="Center"/>
             <Separator></Separator>
+            <Label Content="StudentID" Foreground="Black"></Label>
+            <TextBox x:Name="txtStudentID" Background="White" Foreground="Black" FontSize="18"></TextBox>
             <Label Content="First Name" Foreground="Black"></Label>
             <TextBox x:Name="txtFirstName" Background="White" Foreground="Black" FontSize="18"></TextBox>
-            <Label Content="Last Name" Foreground="Black"></Label>
-            <TextBox x:Name="txtLastName" Background="White" Foreground="Black" FontSize="18"></TextBox>
+            <Label Content="Class" Foreground="Black"></Label>
+            <TextBox x:Name="txtClass" Background="White" Foreground="Black" FontSize="18"></TextBox>
 
-            <Label Content="Email" Foreground="Black"></Label>
-            <TextBox x:Name="txtEmail" Background="White" Foreground="Black" FontSize="18"></TextBox>
-
-            <Label Content="Username" Foreground="Black"></Label>
-            <TextBox x:Name="txtUsername" Background="White" Foreground="Black" FontSize="18"></TextBox>
 
             <Label Content="Password" Foreground="Black"></Label>
             <PasswordBox x:Name="txtPassword" Background="White" Foreground="Black" FontSize="18"></PasswordBox>

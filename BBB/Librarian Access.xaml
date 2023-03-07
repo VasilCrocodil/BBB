@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Librarian_Access" Height="800" Width="800">
     <Grid>
-        <DataGrid x:Name="DataGrid_" HorizontalAlignment="Left" Height="251" Margin="163,55,0,0" VerticalAlignment="Top" Width="455"/>
-        <DataGrid x:Name="DataGrid_2" HorizontalAlignment="Left" Height="287" Margin="223,378,0,0" VerticalAlignment="Top" Width="332"/>
+        <DataGrid x:Name="DataGrid_" HorizontalAlignment="Left" Height="187" Margin="163,55,0,0" VerticalAlignment="Top" Width="455"/>
+        <DataGrid x:Name="DataGrid_2" HorizontalAlignment="Left" Height="184" Margin="223,378,0,0" VerticalAlignment="Top" Width="332"/>
 
     </Grid>
 </Window>

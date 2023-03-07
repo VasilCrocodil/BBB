@@ -28,20 +28,36 @@ namespace BBB
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnection sqlCon = new SqlConnection(@"Data Source=LABSCIFIPC11\LOCALHOST; Initial Catalog =Vasil_Login; Integrated Security = True");
+            SqlConnection sqlCon = new SqlConnection(@"Data Source=LABSCIFIPC11\LOCALHOST; Initial Catalog =library_project; Integrated Security = True");
 
             try
             {
                 if (sqlCon.State == ConnectionState.Closed)
                     sqlCon.Open();
 
-                string query = "Insert into SignUp ([First Name], [Last Name], [Email], [Username], [Password]) values('" + this.txtFirstName.Text + "','" +
-                  this.txtLastName.Text + "', '" + this.txtEmail.Text + "','" + this.txtUsername.Text + "','" + this.txtPassword.Password + "')";
+                string query = "Insert into Students (StudentID,[Sname], [class_], [password_]) values('"+ this.txtStudentID.Text + "','" + this.txtFirstName.Text + "','" + this.txtClass.Text +
+                    "','" + this.txtPassword.Password + "')";
 
                 SqlCommand cmd = new SqlCommand(query, sqlCon);
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Successfully Saved!");
+
+                string query1 = "Select BookID, BookName, author, pubdate, publisher,genre from Books";
+                SqlCommand cmd1 = new SqlCommand(query1, sqlCon);
+                cmd1.ExecuteNonQuery();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd1);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                Books bk = new Books();
+
+                bk.DataGrid_.ItemsSource = dt.DefaultView;
+                adapter.Update(dt);
+
+
+                sqlCon.Close();
+                bk.Show();
+                this.Close();
 
             }
             catch (Exception ex)
@@ -51,6 +67,7 @@ namespace BBB
             }
             finally
             {
+                
                 sqlCon.Close();
             }
         }

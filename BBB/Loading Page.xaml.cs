@@ -46,7 +46,7 @@ namespace BBB
                 if (count == 1)
                 {
                     
-                    this.Close();
+                    
                 }
 
                 else
